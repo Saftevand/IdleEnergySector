@@ -1,21 +1,205 @@
-[gd_scene load_steps=2 format=3 uid="uid://clxtvk7pdk8tm"]
+[gd_scene load_steps=21 format=3 uid="uid://clxtvk7pdk8tm"]
 
 [ext_resource type="Script" uid="uid://dj2nly4nwwjyq" path="res://src/game.gd" id="1_wbfu4"]
+[ext_resource type="Texture2D" uid="uid://iasvhl13mxkf" path="res://src/Sprites/Pieces/piecesWhite.png" id="2_kqvf5"]
+[ext_resource type="Texture2D" uid="uid://btg8tfborbt8c" path="res://src/Sprites/Pieces/piecesBlack.png" id="3_lqjwq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lqjwq"]
+texture = ExtResource("2_kqvf5")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7omc5"]
+tile_size = Vector2i(64, 64)
+sources/19 = SubResource("TileSetAtlasSource_lqjwq")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at4if"]
+atlas = ExtResource("2_kqvf5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_km1yn"]
+atlas = ExtResource("2_kqvf5")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7omc5"]
+atlas = ExtResource("3_lqjwq")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu8jo"]
+atlas = ExtResource("2_kqvf5")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rf6s"]
+atlas = ExtResource("3_lqjwq")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbp7n"]
+atlas = ExtResource("2_kqvf5")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fxc8"]
+atlas = ExtResource("3_lqjwq")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgpsw"]
+atlas = ExtResource("2_kqvf5")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lva8y"]
+atlas = ExtResource("3_lqjwq")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2540"]
+atlas = ExtResource("2_kqvf5")
+region = Rect2(896, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q0ih"]
+atlas = ExtResource("3_lqjwq")
+region = Rect2(896, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlhd6"]
+atlas = ExtResource("2_kqvf5")
+region = Rect2(960, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c8jm"]
+atlas = ExtResource("3_lqjwq")
+region = Rect2(960, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72vyi"]
+atlas = ExtResource("2_kqvf5")
+region = Rect2(1024, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok2ji"]
+atlas = ExtResource("3_lqjwq")
+region = Rect2(1024, 0, 64, 64)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_wbfu4")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 412.0
-offset_top = 287.0
-offset_right = 452.0
-offset_bottom = 310.0
-text = "Test"
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_7omc5")
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 639.0
-offset_top = 316.0
-offset_right = 679.0
-offset_bottom = 339.0
-rotation = -0.842467
-text = "Test"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/MarginContainer/Panel"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_at4if")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_km1yn")
+texture_hover = SubResource("AtlasTexture_7omc5")
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_eu8jo")
+texture_hover = SubResource("AtlasTexture_0rf6s")
+
+[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_dbp7n")
+texture_hover = SubResource("AtlasTexture_2fxc8")
+
+[node name="TextureButton5" type="TextureButton" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_rgpsw")
+texture_hover = SubResource("AtlasTexture_lva8y")
+
+[node name="TextureButton6" type="TextureButton" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_x2540")
+texture_hover = SubResource("AtlasTexture_5q0ih")
+
+[node name="TextureButton4" type="TextureButton" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_dlhd6")
+texture_hover = SubResource("AtlasTexture_8c8jm")
+
+[node name="TextureButton7" type="TextureButton" parent="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_72vyi")
+texture_hover = SubResource("AtlasTexture_ok2ji")
+
+[connection signal="pressed" from="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer/TextureButton" to="." method="select_piece" binds= [Vector2(128, 0)]]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer/TextureButton2" to="." method="select_piece" binds= [Vector2(512, 0)]]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer/TextureButton3" to="." method="select_piece" binds= [Vector2(640, 0)]]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer/TextureButton5" to="." method="select_piece" binds= [Vector2(832, 0)]]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer/TextureButton6" to="." method="select_piece" binds= [Vector2(896, 0)]]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer/TextureButton4" to="." method="select_piece" binds= [Vector2(960, 0)]]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/VBoxContainer/TextureButton7" to="." method="select_piece" binds= [Vector2(1024, 0)]]

@@ -1,15 +1,16 @@
 extends Node2D
 
-@onready var label: Label = $Label
-@onready var label_2: Label = $Label2
+@onready var texture_rect: TextureRect = $CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/MarginContainer/Panel/TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	label.text = "aaa"
-	await get_tree().create_timer(5).timeout
-	label_2.text = "5555"
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func select_piece(pos: Vector2):
+	(texture_rect.texture as AtlasTexture).region.position = pos

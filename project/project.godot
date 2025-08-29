@@ -14,3 +14,8 @@ config/name="IdleEnergySector"
 run/main_scene="res://src/Game.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
