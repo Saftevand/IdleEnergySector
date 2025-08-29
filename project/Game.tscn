@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://clxtvk7pdk8tm"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 412.0
+offset_top = 287.0
+offset_right = 452.0
+offset_bottom = 310.0
+text = "Test"
